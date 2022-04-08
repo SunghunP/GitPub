@@ -5,6 +5,11 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const drinks = require('./models/drinks.js')
 
+
+app.get('/', (req, res) => {
+	res.redirect('/drinks/')
+})
+
 app.get('/drinks/', (req, res) => {
 	res.render('drinks_index.ejs', {allDrinks : drinks})
 })
