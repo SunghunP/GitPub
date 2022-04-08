@@ -11,9 +11,9 @@
 	<h1>Drinks</h1>
 
 	<ul>
-		<% for (let drink in allDrinks) { %>
+		<% for (let drink in drinks) { %>
 		<li>
-			<a href="/drinks/<%=drink%> "> <%= allDrinks[drink].name %> </a>
+			<a href="/drinks/<%=drink%> "> <%= drinks[drink].name %> </a>
 		</li>
 		<% } %>
 	</ul>
