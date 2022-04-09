@@ -13,7 +13,7 @@
 	<ul>
 		<% for (let drink in drinks) { %>
 		<li>
-			<a href="/drinks/<%=drink%> "> <%= drinks[drink].name %> </a>
+			<a href="/drinks/<%=drink%> "> <%= drinks[drink].name[0].toUpperCase() + drinks[drink].name.slice(1) %> </a>
 		</li>
 		<% } %>
 	</ul>
