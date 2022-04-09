@@ -4,9 +4,12 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title><%= drinksId.name.toUpperCase() %></title>
+	<title><%= drinksId.name[0].toUpperCase() + drinksId.name.slice(1)  %></title>
 </head>
 <body>
-	<h1><%= drinksId.name.toUpperCase() %></h1>
+	<h1><%= drinksId.name[0].toUpperCase() + drinksId.name.slice(1) %></h1>
+	<p><img src="<%= drinksId.image %>"/> </p>
+	<p>Price: $<%= drinksId.price %> </p>
+	
 </body>
 </html>
