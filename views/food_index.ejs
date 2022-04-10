@@ -3,9 +3,19 @@
 <%- include("partials/head.ejs") %> 
 
 <body>
-	<h1>Food</h1>
+	<h1>Foods</h1>
 	<ul>
-		<li><a href=""> </a></li>
+		<% for( let food in foods) { %>
+		<li>
+			<a href="/foods/<%= food %>">
+				<%= foods[food].name  %> 
+			</a>
+		</li>
+		<% } %>
 	</ul>
+
+	<footer>
+		<div><a href="/">Back to Homepage</a></div>
+	</footer>
 </body>
 </html>

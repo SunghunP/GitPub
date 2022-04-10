@@ -4,8 +4,13 @@
 
 <body>
 	<h1>Food at Foo Bar</h1>
-	<h2></h2>
-	<p><img/></p>
-	<h3>Price</h3>
+	<h2><%= foodId.name %></h2>
+	<p><img src="<%= foodId.image %> "/></p>
+	<h3>Price: $ <%= foodId.price %> </h3>
+
+	<footer>
+		<div><a href="/foods/">Back to Foods</a></div>
+		<div><a href="/">Back to Homepage</a></div>
+	</footer>
 </body>
 </html>
