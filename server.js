@@ -11,7 +11,13 @@ const PORT = process.env.PORT || 3001;
 // DATABASE
 ///////////////////////////
 const drinks = require('./models/drinks.js')
-const food = require('./modles/foods.js')
+const food = require('./models/foods.js')
+
+
+///////////////////////////
+// MIDDLEWARE
+///////////////////////////
+app.use('/static', express.static("public"))
 
 ///////////////////////////
 // ROUTES
