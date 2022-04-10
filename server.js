@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 ///////////////////////////
 // DATABASE
@@ -25,7 +25,7 @@ app.use('/static', express.static("public"))
 
 // root route redirects to '/drinks/'
 app.get('/', (req, res) => {
-	res.redirect('/drinks/')
+	res.render('foo_bar_index.ejs')
 })
 
 app.get('/drinks/', (req, res) => {
@@ -43,7 +43,7 @@ app.get('/foods/', (req, res) => {
 
 app.get('/foods/:id', (req, res) => {
 	const id = req.params.id
-	res.render('food_show.ejs', {foodsId: foods[id]})
+	res.render('food_show.ejs', {foodId: food[id]})
 })
 
 app.listen(PORT, () => {
