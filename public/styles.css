@@ -1,3 +1,40 @@
+:root {
+	--var-bg-color: #F28585;
+	--var-color: #A52A2A;
+}
+
+html {
+	background-color:var(--var-bg-color);
+}
+
+body {
+	margin: auto;
+	width: 100%;
+	height: auto;
+}
+
+
 h1 {
-	color: brown;
+	color: var(--var-color);
+	font-size: 45px;
+}
+
+p {
+	font-size: 25px;
+}
+
+.flex-cntr {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0px;
+}
+
+.flex-cntr.col {
+	flex-direction: column;
+}
+
+.links {
+	margin-left: 10px;
+	margin-right: 10px;
 }
