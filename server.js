@@ -35,6 +35,10 @@ app.get('/foods/', (req, res) => {
 	res.render('food_index.ejs', {foods: food})
 })
 
+app.get('/foods/:id', (req, res) => {
+	const id = req.params.id
+	res.render('food_show.ejs', {foodsId: foods[id]})
+})
 
 app.listen(PORT, () => {
 	console.log(`Port ${PORT} has started`)
