@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3001;
 // DATABASE
 ///////////////////////////
 const drinks = require('./models/drinks.js')
+const food = require('./modles/foods.js')
 
 ///////////////////////////
 // ROUTES
@@ -29,6 +30,11 @@ app.get('/drinks/:id', (req, res) => {
 	const id = req.params.id
 	res.render('drinks_show.ejs', {drinksId: drinks[id]})
 })
+
+app.get('/foods/', (req, res) => {
+	res.render('food_index.ejs', {foods: food})
+})
+
 
 app.listen(PORT, () => {
 	console.log(`Port ${PORT} has started`)
